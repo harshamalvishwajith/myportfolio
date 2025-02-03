@@ -3,11 +3,17 @@ import Link from "next/link";
 
 // icons
 import { RiLinkedinLine, RiGithubLine, RiWhatsappLine } from "react-icons/ri";
-import { FaRegEnvelope } from "react-icons/fa";
+import { FaRegEnvelope, FaPhoneSquare } from "react-icons/fa";
 
 const Socials = () => {
   return (
     <div className="flex items-center gap-x-5 text-lg">
+      <Link
+        href={"tel://+94766583229/"}
+        className="hover:text-accent transition-all duration-300"
+      >
+        <FaPhoneSquare />
+      </Link>
       <Link
         href={"mailto:harshamalvishwajith@gmail.com"}
         className="hover:text-accent transition-all duration-300"
@@ -15,7 +21,7 @@ const Socials = () => {
         <FaRegEnvelope />
       </Link>
       <Link
-        href={"mhttps://wa.me/94766583229"}
+        href={"https://wa.me/94766583229"}
         className="hover:text-accent transition-all duration-300"
       >
         <RiWhatsappLine />

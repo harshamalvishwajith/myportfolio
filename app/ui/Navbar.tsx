@@ -63,20 +63,22 @@ export default function Navbar() {
 
           {/* Socials and Social Dropdown */}
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <Socials />
+            <div className="invisible sm:visible">
+              <Socials />
+            </div>
 
             {/* social dropdown */}
-            <div className="relative">
+            <div className="relative sm:hidden">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="relative flex rounded-full bg-gray-800 text-sm"
+                className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
               >
                 <span className="sr-only">Open contact menu</span>
                 <p>Contact me</p>
               </button>
 
               {dropdownOpen && (
-                <div className="absolute right-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black/5">
+                <div className="absolute right-0 mt-2 w-48 rounded-md bg-black shadow-lg ring-1 ring-black/5">
                   <Socials />
                 </div>
               )}
