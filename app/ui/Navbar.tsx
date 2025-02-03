@@ -60,49 +60,26 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Notifications and Profile Dropdown */}
+          {/* Socials and Social Dropdown */}
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <Socials />
 
-            {/* Profile dropdown */}
-            {/* <div className="relative">
+            {/* social dropdown */}
+            <div className="relative">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
                 className="relative flex rounded-full bg-gray-800 text-sm"
               >
-                <span className="sr-only">Open user menu</span>
-                <Image
-                  alt="User"
-                  src="/Harshamal.svg"
-                  width={32}
-                  height={32}
-                  className="size-8 rounded-full"
-                />
+                <span className="sr-only">Open contact menu</span>
+                <p>Contact me</p>
               </button>
 
               {dropdownOpen && (
                 <div className="absolute right-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black/5">
-                  <Link
-                    href="/profile"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Your Profile
-                  </Link>
-                  <Link
-                    href="/settings"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Settings
-                  </Link>
-                  <Link
-                    href="/logout"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Sign out
-                  </Link>
+                  <Socials />
                 </div>
               )}
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
