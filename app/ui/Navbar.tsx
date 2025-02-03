@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Socials from "./Socials";
+import { useRouter } from "next/router";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -14,6 +15,7 @@ const navigation = [
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const { basePath } = useRouter();
 
   return (
     <nav className="bg-transparent fixed top-0 left-0 w-full z-50">
@@ -35,7 +37,7 @@ export default function Navbar() {
             <Link href="/" className="flex shrink-0 items-center">
               <Image
                 alt="Your Company"
-                src="/logo.svg"
+                src={`${basePath}/logo.svg`}
                 width={200}
                 height={100}
                 className="h-12 w-auto dark:invert"
