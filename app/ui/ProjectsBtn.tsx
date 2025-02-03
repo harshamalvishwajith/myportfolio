@@ -8,6 +8,8 @@ import Link from "next/link";
 import { HiArrowRight } from "react-icons/hi2";
 
 const ProjectsBtn = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   return (
     <div className="mx-auto xl:mx-0">
       <Link
@@ -15,7 +17,7 @@ const ProjectsBtn = () => {
         className="relative w-[155px] h-[155px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group z-40"
       >
         <Image
-          src={"/rounded-text.png"}
+          src={`${basePath}/rounded-text.png`}
           width={141}
           height={148}
           alt=""

@@ -6,6 +6,8 @@ import { fadeIn } from "@/variants";
 import ProjectsBtn from "@/app/ui/ProjectsBtn";
 
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   return (
     <div>
       <motion.div
@@ -16,7 +18,7 @@ export default function Home() {
         className="fixed mt-3 right-0"
       >
         <Image
-          src="/Harshamal.svg"
+          src={`${basePath}/Harshamal.svg`}
           alt="Harshamal"
           width={450}
           height={500}
