@@ -10,8 +10,8 @@ export async function generateStaticParams() {
 }
 
 function addBaseUrlToImages(content: string, baseUrl: string): string {
-  return content.replace(/!\[([^\]]*)\]\((\/[^\)]+)\)/g, (match, alt, src) => {
-    return `![${alt}](${baseUrl}${src})`;
+  return content.replace(/<img\s+src=["'](\/[^"']+)["']/g, (match, src) => {
+    return match.replace(src, `${baseUrl}${src}`);
   });
 }
 
