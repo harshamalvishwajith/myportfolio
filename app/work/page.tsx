@@ -1,8 +1,8 @@
 import { WorkPosts } from "@/app/ui/workPosts";
 
 export const metadata = {
-  title: "Blog",
-  description: "Read my blog.",
+  title: "Works",
+  description: "Checkout my works.",
 };
 
 export default function Page() {

@@ -19,6 +19,7 @@ type IconName =
   | "git";
 
 export function WorkPosts() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const allWorks = getWorkPosts();
 
   return (
@@ -32,7 +33,7 @@ export function WorkPosts() {
           >
             <Image
               className="object-cover w-full rounded-t-lg h-96"
-              src={post.metadata.imageUrl}
+              src={`${basePath}/${post.metadata.imageUrl}`}
               alt=""
               width={400}
               height={300}

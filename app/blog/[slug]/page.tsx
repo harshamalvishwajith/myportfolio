@@ -1,8 +1,6 @@
 import { notFound } from "next/navigation";
 import { CustomMDX } from "@/app/ui/mdx";
 import { formatDate, getBlogPosts } from "@/app/blog/utils";
-const baseUrl = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
 export async function generateStaticParams() {
   let posts = getBlogPosts();
 
@@ -12,6 +10,8 @@ export async function generateStaticParams() {
 }
 
 export function generateMetadata({ params }) {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   let post = getBlogPosts().find((post) => post.slug === params.slug);
   if (!post) {
     return;
@@ -52,6 +52,8 @@ export function generateMetadata({ params }) {
 }
 
 export default function Blog({ params }) {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   let post = getBlogPosts().find((post) => post.slug === params.slug);
 
   if (!post) {

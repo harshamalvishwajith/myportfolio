@@ -3,7 +3,6 @@ import { CustomMDX } from "@/app/ui/mdx";
 import { getWorkPosts } from "@/app/work/utils";
 import { RiTimeLine } from "react-icons/ri";
 import Image from "next/image";
-const baseUrl = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export async function generateStaticParams() {
   let posts = getWorkPosts();
@@ -14,6 +13,7 @@ export async function generateStaticParams() {
 }
 
 export function generateMetadata({ params }) {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_PATH || "";
   let post = getWorkPosts().find((post) => post.slug === params.slug);
   if (!post) {
     return;
@@ -54,6 +54,7 @@ export function generateMetadata({ params }) {
 }
 
 export default function Blog({ params }) {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_PATH || "";
   let post = getWorkPosts().find((post) => post.slug === params.slug);
 
   if (!post) {
