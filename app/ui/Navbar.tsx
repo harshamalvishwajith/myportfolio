@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Socials from "./Socials";
+import { usePathname } from "next/navigation";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -16,8 +17,15 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
+  const pathname = usePathname();
+  const currentPath = pathname.split("/")[1];
+
+  navigation.forEach((item) => {
+    item.current = item.href === `/${currentPath}`;
+  });
+
   return (
-    <nav className="bg-transparent fixed top-0 left-0 w-full z-50">
+    <nav className="dark:bg-[#0a0a0a] bg-white fixed top-0 left-0 w-full z-50">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           {/* Mobile menu button */}
@@ -74,7 +82,7 @@ export default function Navbar() {
                 className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
               >
                 <span className="sr-only">Open contact menu</span>
-                <p>Contact me</p>
+                <p>Contact</p>
               </button>
 
               {dropdownOpen && (

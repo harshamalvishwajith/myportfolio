@@ -15,7 +15,7 @@ export default function Home() {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="fixed mt-3 right-0"
+        className="fixed mt-3 right-0 mr-28 xl:visible invisible"
       >
         <Image
           src={`${basePath}/Harshamal.svg`}
@@ -26,7 +26,7 @@ export default function Home() {
         />
       </motion.div>
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
+        <div className="text-center flex flex-col pt-10 justify-center xl:pt-40 xl:text-left h-full container mx-auto">
           {/* title */}
           <motion.h1
             variants={fadeIn("down", 0.2)}
