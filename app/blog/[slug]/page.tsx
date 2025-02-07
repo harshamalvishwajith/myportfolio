@@ -9,6 +9,12 @@ export async function generateStaticParams() {
   }));
 }
 
+function addBaseUrlToImages(content: string, baseUrl: string): string {
+  return content.replace(/!\[([^\]]*)\]\((\/[^\)]+)\)/g, (match, alt, src) => {
+    return `![${alt}](${baseUrl}${src})`;
+  });
+}
+
 export function generateMetadata({ params }) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -93,7 +99,7 @@ export default function Blog({ params }) {
         </p>
       </div>
       <article className="prose">
-        <CustomMDX source={post.content} />
+        <CustomMDX source={addBaseUrlToImages(post.content, baseUrl)} />
       </article>
     </section>
   );

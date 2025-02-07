@@ -87,7 +87,12 @@ export default function Blog({ params }) {
       <h1 className="title font-semibold text-2xl tracking-tighter">
         {post.metadata.title}
       </h1>
-      <Image src={post.metadata.imageUrl} alt="" width={800} height={400} />
+      <Image
+        src={`${baseUrl}/${post.metadata.imageUrl}`}
+        alt=""
+        width={800}
+        height={400}
+      />
       <div className="flex items-center space-x-2 mt-4 mb-3 text-lg text-gray-600 dark:text-gray-300">
         <RiTimeLine /> {"  "}
         <span className="text-sm text-gray-600 dark:text-gray-300">
