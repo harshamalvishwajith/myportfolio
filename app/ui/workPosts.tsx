@@ -16,7 +16,8 @@ type IconName =
   | "css3"
   | "mongodb"
   | "tailwindcss"
-  | "git";
+  | "git"
+  | "express";
 
 export function WorkPosts() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
