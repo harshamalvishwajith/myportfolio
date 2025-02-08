@@ -60,15 +60,6 @@ function addBaseUrlToContent(content: string, baseUrl: string): string {
   });
 
   // Add base URL to PDF links
-  content = content.replace(
-    /<a\s+href=["'](\/[^"']+\.pdf)["']/g,
-    (match, href) => {
-      if (!href.startsWith("http") && href.startsWith("/")) {
-        return match.replace(href, `${baseUrl}${href}`);
-      }
-      return match;
-    }
-  );
 
   return content;
 }
