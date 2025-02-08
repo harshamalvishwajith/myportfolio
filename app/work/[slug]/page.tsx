@@ -53,17 +53,6 @@ export function generateMetadata({ params }) {
   };
 }
 
-function addBaseUrlToContent(content: string, baseUrl: string): string {
-  // Add base URL to image sources
-  content = content.replace(/<img\s+src=["'](\/[^"']+)["']/g, (match, src) => {
-    return match.replace(src, `${baseUrl}${src}`);
-  });
-
-  // Add base URL to PDF links
-
-  return content;
-}
-
 export default function Blog({ params }) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_PATH || "";
   let post = getWorkPosts().find((post) => post.slug === params.slug);
@@ -111,7 +100,7 @@ export default function Blog({ params }) {
         </span>{" "}
       </div>
       <article className="prose">
-        <CustomMDX source={addBaseUrlToContent(post.content, baseUrl)} />
+        <CustomMDX source={post.content} />
       </article>
     </section>
   );
