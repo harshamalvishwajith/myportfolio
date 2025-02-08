@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 const navigation = [
   { name: "Home", href: "/", current: true },
   { name: "Projects", href: "/work", current: false },
-  { name: "Skills", href: "/skill", current: false },
+  { name: "Skills", href: "/skills", current: false },
 ];
 
 export default function Navbar() {

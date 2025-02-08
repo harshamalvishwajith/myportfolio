@@ -63,7 +63,10 @@ function addBaseUrlToContent(content: string, baseUrl: string): string {
   content = content.replace(
     /<a\s+href=["'](\/[^"']+\.pdf)["']/g,
     (match, href) => {
-      return match.replace(href, `${baseUrl}${href}`);
+      if (!href.startsWith("http") && href.startsWith("/")) {
+        return match.replace(href, `${baseUrl}${href}`);
+      }
+      return match;
     }
   );
 
