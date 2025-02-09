@@ -20,7 +20,9 @@ const SoftSkills: React.FC = () => {
           key={index}
           className="flex items-center space-x-3 rtl:space-x-reverse mb-4 xl:mb-10"
         >
-          <IoMdCheckmarkCircleOutline className="text-green-500" />
+          <div className="text-green-500">
+            <IoMdCheckmarkCircleOutline />
+          </div>
           <div>{skill}</div>
         </li>
       ))}
