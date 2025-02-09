@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 const navigation = [
   { name: "Home", href: "/", current: true },
   { name: "Projects", href: "/work", current: false },
-  { name: "Skills", href: "/skills", current: false },
+  { name: "About", href: "/about", current: false },
 ];
 
 export default function Navbar() {
@@ -25,7 +25,7 @@ export default function Navbar() {
   });
 
   return (
-    <nav className="dark:bg-[#0a0a0a] bg-white fixed top-0 left-0 w-full z-50">
+    <nav className="bg-[#0a0a0a] fixed top-0 left-0 w-full z-50">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           {/* Mobile menu button */}
@@ -47,7 +47,7 @@ export default function Navbar() {
                 src={`${basePath}/logo.svg`}
                 width={200}
                 height={100}
-                className="h-12 w-auto dark:invert"
+                className="h-12 w-auto invert"
               />
             </Link>
             <div className="hidden sm:ml-6 sm:block">
@@ -79,7 +79,7 @@ export default function Navbar() {
             <div className="relative sm:hidden">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                className="border focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-2.5 py-2.5 text-center me-2 mb-2 border-gray-600 text-gray-400 hover:text-white hover:bg-gray-600 focus:ring-gray-800"
               >
                 <span className="sr-only">Open contact menu</span>
                 <p>Contact</p>

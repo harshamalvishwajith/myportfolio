@@ -93,9 +93,9 @@ export default function Blog({ params }) {
         width={800}
         height={400}
       />
-      <div className="flex items-center space-x-2 mt-4 mb-3 text-lg text-gray-600 dark:text-gray-300">
+      <div className="flex items-center space-x-2 mt-4 mb-3 text-lg text-gray-300">
         <RiTimeLine /> {"  "}
-        <span className="text-sm text-gray-600 dark:text-gray-300">
+        <span className="text-sm text-gray-300">
           {post.metadata.duration}
         </span>{" "}
       </div>

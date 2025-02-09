@@ -30,7 +30,7 @@ export function WorkPosts() {
           <Link
             key={post.slug}
             href={`/work/${post.slug}`}
-            className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+            className="flex flex-col items-center border rounded-lg shadow-sm border-gray-700 bg-gray-800 hover:bg-gray-700"
           >
             <Image
               className="object-cover w-full rounded-t-lg h-96"
@@ -40,7 +40,7 @@ export function WorkPosts() {
               height={300}
             />
             <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
                 {post.metadata.title}
               </h5>
               <div className="flex space-x-1 text-4xl text-gray-300">
@@ -50,18 +50,18 @@ export function WorkPosts() {
                   </span>
                 ))}
               </div>
-              <div className="flex items-center space-x-2 mt-4 mb-3 text-lg text-gray-600 dark:text-gray-300">
+              <div className="flex items-center space-x-2 mt-4 mb-3 text-lg text-gray-300">
                 <IoMdTimer /> {"  "}
-                <span className="text-sm text-gray-600 dark:text-gray-300">
+                <span className="text-sm text-gray-300">
                   {post.metadata.duration}
                 </span>{" "}
               </div>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              <p className="mb-3 font-normal text-gray-400">
                 {post.metadata.summary}
               </p>
-              <div className="flex items-center space-x-2 mt-2 mb-3 text-lg text-gray-600 dark:text-gray-300">
+              <div className="flex items-center space-x-2 mt-2 mb-3 text-lg text-gray-300">
                 <FaClipboardUser />{" "}
-                <span className="text-sm text-gray-600 dark:text-gray-300">
+                <span className="text-sm text-gray-300">
                   {post.metadata.role}{" "}
                 </span>
               </div>
