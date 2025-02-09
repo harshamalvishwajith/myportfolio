@@ -8,6 +8,7 @@ type Metadata = {
   role: string;
   technology: string;
   duration: string;
+  priority: string;
 };
 
 function parseFrontmatter(fileContent: string) {
