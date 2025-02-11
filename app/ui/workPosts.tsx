@@ -17,7 +17,10 @@ type IconName =
   | "mongodb"
   | "tailwindcss"
   | "git"
-  | "express";
+  | "express"
+  | "php"
+  | "xampp"
+  | "mysql";
 
 export function WorkPosts() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";

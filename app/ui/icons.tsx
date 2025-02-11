@@ -8,6 +8,9 @@ import {
   SiTailwindcss,
   SiNextdotjs,
   SiExpress,
+  SiPhp,
+  SiXampp,
+  SiMysql,
 } from "react-icons/si";
 
 import { TbBrandTypescript } from "react-icons/tb";
@@ -24,7 +27,10 @@ type IconName =
   | "mongodb"
   | "tailwindcss"
   | "git"
-  | "express";
+  | "express"
+  | "php"
+  | "xampp"
+  | "mysql";
 
 const getIcon = (iconName: IconName) => {
   switch (iconName) {
@@ -52,6 +58,12 @@ const getIcon = (iconName: IconName) => {
       return <SiGit />;
     case "express":
       return <SiExpress />;
+    case "php":
+      return <SiPhp />;
+    case "xampp":
+      return <SiXampp />;
+    case "mysql":
+      return <SiMysql />;
     default:
       return null;
   }
