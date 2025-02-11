@@ -11,6 +11,8 @@ import {
   SiPhp,
   SiXampp,
   SiMysql,
+  SiFlutter,
+  SiFirebase,
 } from "react-icons/si";
 
 import { TbBrandTypescript } from "react-icons/tb";
@@ -30,7 +32,9 @@ type IconName =
   | "express"
   | "php"
   | "xampp"
-  | "mysql";
+  | "mysql"
+  | "flutter"
+  | "firebase";
 
 const getIcon = (iconName: IconName) => {
   switch (iconName) {
@@ -64,6 +68,10 @@ const getIcon = (iconName: IconName) => {
       return <SiXampp />;
     case "mysql":
       return <SiMysql />;
+    case "flutter":
+      return <SiFlutter />;
+    case "firebase":
+      return <SiFirebase />;
     default:
       return null;
   }
