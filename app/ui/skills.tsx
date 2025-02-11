@@ -19,6 +19,7 @@ import {
   SiExpress,
   SiAdobephotoshop,
   SiAdobeillustrator,
+  SiOracle,
 } from "react-icons/si";
 
 import { TbSql, TbBrandVscode } from "react-icons/tb";
@@ -69,7 +70,7 @@ export default function Skills() {
         </div>
       </div>
       <div className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60">
-        <div className="font-light mb-2 md:mb-0">Programing</div>
+        <div className="font-light mb-2 md:mb-0">Programming</div>
         <div className="hidden md:flex">-</div>
         <div className="flex gap-x-4">
           <div className="relative group text-3xl text-white">
@@ -112,6 +113,12 @@ export default function Skills() {
             <SiMongodb />
             <span className="z-50 absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max p-1 text-xs text-black bg-white rounded opacity-0 group-hover:opacity-100 transition-opacity">
               MongoDB
+            </span>
+          </div>
+          <div className="relative group text-3xl text-white">
+            <SiOracle />
+            <span className="z-50 absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max p-1 text-xs text-black bg-white rounded opacity-0 group-hover:opacity-100 transition-opacity">
+              Oracle SQL
             </span>
           </div>
           <div className="relative group text-3xl text-white">
