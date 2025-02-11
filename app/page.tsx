@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <motion.div
-        variants={fadeIn("down", 0.2)}
+        variants={fadeIn("up", 0.2)}
         initial="hidden"
         animate="show"
         exit="hidden"
