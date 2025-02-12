@@ -18,7 +18,7 @@ export default function Education() {
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium text-white">
-              BSc (Hons) in Information Technology Specialising in Software
+              BSc (Hons) in Information Technology Specializing in Software
               Engineering
             </p>
             <p className="text-sm text-white/60">

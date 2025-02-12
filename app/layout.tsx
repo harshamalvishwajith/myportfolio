@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/app/ui/Navbar";
 //fonts
 import { Sora } from "next/font/google";
+import ChatIcon from "@/app/ui/ChatIcon";
 
 //font settings
 const sora = Sora({
@@ -39,6 +40,7 @@ export default function RootLayout({
       >
         <Navbar />
         <main className="mt-16 p-4">{children}</main>
+        <ChatIcon />
       </body>
     </html>
   );
