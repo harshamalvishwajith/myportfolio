@@ -10,6 +10,7 @@ const navigation = [
   { name: "Home", href: "/", current: true },
   { name: "Projects", href: "/work", current: false },
   { name: "About", href: "/about", current: false },
+  { name: "My Blogs", href: "/blog", current: false },
 ];
 
 export default function Navbar() {
