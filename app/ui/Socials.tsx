@@ -27,7 +27,7 @@ const Socials = () => {
         <RiWhatsappLine />
       </Link>
       <Link
-        href={"https://github.com/it22219916"}
+        href={"https://github.com/harshamalvishwajith"}
         className="hover:text-blue-300 transition-all duration-300"
       >
         <RiGithubLine />
