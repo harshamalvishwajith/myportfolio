@@ -5,7 +5,7 @@ import { HiArrowRight } from "react-icons/hi";
 export default function Education() {
   return (
     <ul className="max-w-xl divide-y divide-gray-700">
-      <li className="px-3 sm:pb-4">
+      <li className="px-3 sm:pb-4 xl:py-8">
         <div className="flex items-center py-2 space-x-4 rtl:space-x-reverse">
           <div className="shrink-0">
             <Image
@@ -46,7 +46,7 @@ export default function Education() {
           <HiArrowRight className="group-hover:translate-x-2 transition-all duration-300" />
         </a>
       </li>
-      <li className="px-3 sm:pb-4">
+      <li className="px-3 sm:pb-4 xl:py-8">
         <div className="flex items-center py-2 space-x-4 rtl:space-x-reverse">
           <div className="shrink-0">
             <Image
@@ -81,7 +81,7 @@ export default function Education() {
           <HiArrowRight className="group-hover:translate-x-2 transition-all duration-300" />
         </a>
       </li>
-      <li className="px-3 sm:pb-4">
+      <li className="px-3 sm:pb-4 xl:py-8">
         <div className="flex items-center py-2 space-x-4 rtl:space-x-reverse">
           <div className="shrink-0">
             <Image
@@ -112,7 +112,7 @@ export default function Education() {
         </div>
         <p className="text-base text-white">🏅 Passed with 1C and 2S&apos;s.</p>
       </li>
-      <li className="px-3 sm:pb-4">
+      <li className="px-3 sm:pb-4 xl:py-8">
         <div className="flex items-center py-2 space-x-4 rtl:space-x-reverse">
           <div className="shrink-0">
             <Image
