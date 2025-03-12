@@ -1,3 +1,4 @@
+import { link } from "fs";
 import Image from "next/image";
 
 export default function Skills() {
@@ -65,12 +66,20 @@ export default function Skills() {
       link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
     },
     {
+      name: "Postman",
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+    },
+    {
       name: ".NET",
       link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg",
     },
     {
       name: "Express",
       link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+    },
+    {
+      name: "Figma",
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
     },
   ];
 
