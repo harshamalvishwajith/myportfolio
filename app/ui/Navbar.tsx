@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Socials from "./Socials";
 import { usePathname } from "next/navigation";
+import { MdContactPhone } from "react-icons/md";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -72,18 +73,18 @@ export default function Navbar() {
 
           {/* Socials and Social Dropdown */}
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <div className="invisible sm:visible">
+            <div className="hidden md:block">
               <Socials />
             </div>
 
             {/* social dropdown */}
-            <div className="relative sm:hidden">
+            <div className="relative md:hidden">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="border focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-2.5 py-2.5 text-center me-2 mb-2 border-gray-600 text-gray-400 hover:text-white hover:bg-gray-600 focus:ring-gray-800"
+                className="hover:text-blue-300 transition-all duration-300 text-xl"
               >
                 <span className="sr-only">Open contact menu</span>
-                <p>Contact</p>
+                <MdContactPhone />
               </button>
 
               {dropdownOpen && (
