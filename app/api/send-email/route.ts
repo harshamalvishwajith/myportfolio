@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "contact@yourdomain.com", // Replace with your verified sender
+        from: "contact@harshamal.me",
         to: "harshamalvishwajith@gmail.com",
         subject: subject,
         text: `From: ${email}\n\n${message}`,
