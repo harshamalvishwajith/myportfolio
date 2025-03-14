@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const allowedOrigin = "https://harshamal.me"; // Change this to your actual domain
-
 export async function POST(req: NextRequest) {
   try {
     const { email, subject, message } = await req.json();
@@ -24,39 +22,14 @@ export async function POST(req: NextRequest) {
       throw new Error("Failed to send email");
     }
 
-    return new NextResponse(
-      JSON.stringify({ message: "Email sent successfully!" }),
-      {
-        status: 200,
-        headers: {
-          "Access-Control-Allow-Origin": allowedOrigin,
-          "Access-Control-Allow-Methods": "POST, OPTIONS",
-          "Access-Control-Allow-Headers": "Content-Type, Authorization",
-        },
-      }
+    return NextResponse.json(
+      { message: "Email sent successfully!" },
+      { status: 200 }
     );
   } catch (error) {
-    return new NextResponse(
-      JSON.stringify({ error: (error as Error).message }),
-      {
-        status: 500,
-        headers: {
-          "Access-Control-Allow-Origin": allowedOrigin,
-          "Access-Control-Allow-Methods": "POST, OPTIONS",
-          "Access-Control-Allow-Headers": "Content-Type, Authorization",
-        },
-      }
+    return NextResponse.json(
+      { error: (error as Error).message },
+      { status: 500 }
     );
   }
-}
-
-export async function OPTIONS() {
-  return new NextResponse(null, {
-    status: 204,
-    headers: {
-      "Access-Control-Allow-Origin": allowedOrigin,
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization",
-    },
-  });
 }
