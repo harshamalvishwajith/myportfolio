@@ -20,11 +20,14 @@ const ContactForm = () => {
     e.preventDefault();
     setStatus("Sending...");
 
-    const response = await fetch("/api/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    const response = await fetch(
+      "https://your-vercel-project.vercel.app/api/send-email",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      }
+    );
 
     if (response.ok) {
       setStatus("Message sent successfully!");
