@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
     const { email, subject, message } = await req.json();
 
     const response = await fetch(
-      "https://your-vercel-project.vercel.app/api/send-email",
+      "https://myportfolio-one-black.vercel.app/api/send-email",
       {
         method: "POST",
         headers: {
