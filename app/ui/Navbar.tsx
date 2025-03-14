@@ -12,7 +12,7 @@ const navigation = [
   { name: "Projects", href: "/work", current: false },
   { name: "About", href: "/about", current: false },
   { name: "My Blogs", href: "/blog", current: false },
-  { name: "Contact Me", href: "/contact", current: false },
+  // { name: "Contact Me", href: "/contact", current: false },
 ];
 
 export default function Navbar() {
