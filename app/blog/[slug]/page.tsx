@@ -15,7 +15,7 @@ function addBaseUrlToImages(content: string, baseUrl: string): string {
   });
 }
 
-export function generateMetadata({ params }) {
+export async function generateMetadata({ params }) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
   let post = getBlogPosts().find((post) => post.slug === params.slug);
